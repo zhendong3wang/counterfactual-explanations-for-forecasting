@@ -1,0 +1,7 @@
+,dataset,Values,,,,,,,,,,,,,,,,,,,,,,
+,1cif2016,,,,2nn5,,,,3tourism,,,,4sp500,,,,5m4,,,,6mimic,,,
+forecast_model,AVERAGE of forecast_smape,STDEV of forecast_smape,AVERAGE of forecast_mase,STDEV of forecast_mase,AVERAGE of forecast_smape,STDEV of forecast_smape,AVERAGE of forecast_mase,STDEV of forecast_mase,AVERAGE of forecast_smape,STDEV of forecast_smape,AVERAGE of forecast_mase,STDEV of forecast_mase,AVERAGE of forecast_smape,STDEV of forecast_smape,AVERAGE of forecast_mase,STDEV of forecast_mase,AVERAGE of forecast_smape,STDEV of forecast_smape,AVERAGE of forecast_mase,STDEV of forecast_mase,AVERAGE of forecast_smape,STDEV of forecast_smape,AVERAGE of forecast_mase,STDEV of forecast_mase
+1gru,11.139,0.269,1.540,0.058,29.550,0.403,0.714,0.008,35.289,0.179,1.210,0.012,11.576,0.437,13.701,0.535,12.476,0.214,7.057,0.253,9.430,0.018,1.138,0.002
+2seq2seq,11.409,0.207,1.614,0.052,37.441,0.100,0.922,0.003,37.383,0.568,1.315,0.028,12.134,0.345,14.310,0.369,12.092,0.359,6.507,0.410,9.415,0.050,1.135,0.006
+3wavenet,9.077,0.140,1.318,0.024,35.395,0.178,0.837,0.001,25.625,0.054,0.895,0.002,8.307,0.079,9.421,0.109,13.922,0.155,6.586,0.161,10.962,0.017,1.308,0.001
+4nbeats,10.935,0.222,1.633,0.043,29.213,0.916,0.712,0.032,25.079,0.296,0.844,0.006,7.529,0.147,8.703,0.173,10.981,0.149,5.378,0.144,9.519,0.032,1.148,0.004

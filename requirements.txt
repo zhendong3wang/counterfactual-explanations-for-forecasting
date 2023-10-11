@@ -1,0 +1,22 @@
+pandas==1.5.3 
+numpy==1.23.5
+scikit-learn==1.2.2 
+tensorflow==2.11.1 
+keras==2.11.0
+nbeats-keras==1.8.0
+tfts==0.0.5
+# keras-tuner==1.3.5
+# tensorflow-probability==0.19.0
+jupyter==1.0.0
+nvidia-cudnn-cu11==8.6.0.163
+fqdn==1.5.1
+isoduration==20.11.0
+jax==0.4.8
+jsonpointer==2.3
+pip-chill==1.0.3
+# plotly==5.14.1
+pmdarima==2.0.3
+pydot==1.4.2
+tzdata==2023.3
+uri-template==1.2.0
+webcolors==1.13
