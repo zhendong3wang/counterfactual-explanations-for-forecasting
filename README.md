@@ -1,23 +1,24 @@
 # Counterfactual Explanations for Time Series Forecasting
 Counterfactual Explanations for Time Series Forecasting<br/>
-Accepted at ICDM 2023<br/>
-<!-- [[paper_link]](https://arxiv.org/)
-[[slides_TBD]](https://github.com/zhendong3wang/counterfactual-explanations-for-forecasting) 
-[[conference_code]](https://github.com/zhendong3wang/counterfactual-explanations-for-forecasting) -->
+2023 IEEE International Conference on Data Mining (ICDM 2023)<br/>
+[[paper_link]](https://ieeexplore.ieee.org/document/10415785)
+[[presentation_slides]](./supplement_figures/ICDM_ForecastCF.pdf) 
+<!-- [[conference_code]](https://github.com/zhendong3wang/counterfactual-explanations-for-forecasting) -->
 
 In this paper, we formulate the novel problem of counterfactual generation for time series forecasting, and propose an algorithm, called **ForecastCF**, that solves the problem by applying gradient-based perturbations to the original time series. ForecastCF guides the perturbations by applying lower and upper bound constraints to the forecasted values to obtain desired prediction outcomes.
 
-<!-- If you find this GitHub repo useful in your research work, please consider citing our paper:
+If you find this GitHub repo useful in your research work, please consider citing our paper:
 ```
-@article{wang_style-transfer_2023,
+@inproceedings{wang_counterfactual_2023,
+    title = {Counterfactual {Explanations} for {Time} {Series} {Forecasting}},
+    doi = {10.1109/ICDM58522.2023.00180},
+    booktitle = {2023 {IEEE} {International} {Conference} on {Data} {Mining} ({ICDM})},
+    author = {Wang, Zhendong and Miliou, Ioanna and Samsten, Isak and Papapetrou, Panagiotis},
+    month = dec,
+    year = {2023},
+    pages = {1391--1396},
 }
 ``` 
-Please also consider citing the original publication:
-```
-@article{wang_counterfactual_2021,
-}
-``` 
--->
 
 ## Dependencies
 For reproducibility, all the experiments and the computational runtime are evaluated with NVIDIA GeForce RTX 2080 (GPU) and AMD Ryzen Threadripper 2950X 16-Core Processor (CPU), with following dependencies:
@@ -42,8 +43,7 @@ Together with two additional datasets in stock marketing and healthcare:
 - *SP500*: originally collected from [Yahoo Finance](https://finance.yahoo.com/), including the Open stock prices of companies based on the S&P500 index between 2013-02-08 and 2018-02-07;
 - *MIMIC*: extracted mean arterial pressure (MAP) measurements from 1,035 cardiovascular patients in the [MIMIC-III database](https://physionet.org/content/mimiciii/1.4/), with a hypotension prediction task to forecast an 8-hour-ahead MAP based on the historical 24-hour measurement;
 
-For data pre-processing, an in-sample strategy for the rolling origin evaluation technique is applied, as shown in the [supplementary figure](./supplement_figures/data_train_test_split.png). Specifically, we utilize the temporal order to split each individual time series into training, validation, and testing chunks, based on the split size (e.g., 60%/20%/20%), and then we aggregate the individual chunks into the final training, validation, and test sets. A standard min-max normalization is
-applied using scales of the training set.
+For data pre-processing, an in-sample strategy for the rolling origin evaluation technique is applied, as shown in the [supplementary figure](./supplement_figures/data_train_test_split.png). Specifically, we utilize the temporal order to split each individual time series into training, validation, and testing chunks, based on the split size (e.g., 60%/20%/20%), and then we aggregate the individual chunks into the final training, validation, and test sets. A standard min-max normalization is applied using scales of the training set.
 The summary statistics are described in the [supplementary table](./supplement_figures/data_summary_statistics.png).
 
 ### Forecasting models
@@ -86,7 +86,7 @@ bash run_horizon_test.sh
 
 ### Ablation study for two hyperparameters: desired change percent `cp` and fraction of std `fr`:
 ```
-bash run_ablation_percent.sh
+bash run_ablation_desired_change.sh
 ```
 ```
 bash run_ablation_fraction.sh
